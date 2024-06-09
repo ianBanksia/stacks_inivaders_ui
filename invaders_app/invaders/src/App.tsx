@@ -51,17 +51,11 @@ function Contents() {
       <UserCard />
 
       <div className={'logos'}>
-        <a
-          href="https://www.roo-stx.com"
-          target="_blank"
-          className={'roo-logo'}
-        >
-          <img
-            src={rooLogo} 
-            className="logo ROO"
-            alt="$ROO logo"
+      <img
+            src={stacksInvadersLogo}
+            className="logo stacks invaders"
+            alt="Stacks Invaders"
           />
-        </a>
         {/* <p className="read-the-docs-white-large">
       STACKS INVADERS
       </p>   */}
@@ -122,7 +116,7 @@ function Contents() {
       <br />
       <br />
 
-      <img
+      {/* <img
             src={stacksLogo} 
             className="logo ROO"
             alt="$ROO logo"
@@ -131,7 +125,7 @@ function Contents() {
             src={bitcoinLogo} 
             className="logo ROO"
             alt="$ROO logo"
-          />           
+          />            */}
       </div>
     </>
   );

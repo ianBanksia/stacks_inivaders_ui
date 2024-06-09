@@ -8,50 +8,53 @@ import {
     trueCV,
   } from 'micro-stacks/clarity';
   import { utf8ToBytes } from 'micro-stacks/common';
+  import { useAccount } from '@micro-stacks/react';
+  import { useState } from 'react';  
+  import { useOpenContractCall } from '@micro-stacks/react';  
+
   import {
     makeStandardFungiblePostCondition,
     makeContractFungiblePostCondition,
     createAssetInfo,
     FungibleConditionCode,
     makeStandardSTXPostCondition } from 'micro-stacks/transactions';
-  import { useAccount } from '@micro-stacks/react';
-  import { useState } from 'react';  
-  import { useOpenContractCall } from '@micro-stacks/react';  
-// ZOLANA ON
-export const ZolanaMintNopeWoo = () => {
+
+// Mint Stacks Invaders SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ.stacks-invaders-v0
+export const MintInvaders = () => {
     const { openContractCall, isRequestPending } = useOpenContractCall();
     const { stxAddress } = useAccount();
     const [response, setResponse] = useState(null);
    
+// $ROO
+const roo_token = createAssetInfo(
+  'SP2C1WREHGM75C7TGFAEJPFKTFTEGZKF6DFT6E2GE',
+  'kangaroo',
+  'kangaroo'
+)
+
     const functionArgs = [
       uintCV(1234),
       intCV(-234),
       bufferCV(utf8ToBytes('hello, world')),
       stringAsciiCV('hey-ascii'),
       stringUtf8CV('hey-utf8'),
-      standardPrincipalCV('SP18MTB6VXR499WNTDDWDK2Q1KG960ABY8VJB37ZR'),
+      standardPrincipalCV('SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ'),
       trueCV(),
     ];
-
-    // $WELSH
-    const welsh_token = createAssetInfo(
-      'SP32AEEF6WW5Y0NMJ1S8SBSZDAY8R5J32NBZFPKKZ',
-      'nope',
-      'nope'
-    )         
-
+   
     const handleOpenContractCall = async () => {
-      const postConditions = [ makeStandardFungiblePostCondition(
+
+      const postConditions = [ makeStandardSTXPostCondition(
         stxAddress!,
-        FungibleConditionCode.Equal,
-        '50000000000000',
-        welsh_token
+        FungibleConditionCode.LessEqual,
+        '5000000'
       ),
     ]; 
+
       await openContractCall({
-        contractAddress: 'SP18MTB6VXR499WNTDDWDK2Q1KG960ABY8VJB37ZR',
-        contractName: 'zolana-node2',
-        functionName: 'mint_nothing_1000',
+        contractAddress: 'SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ',
+        contractName: 'stacks-invaders-v0',
+        functionName: 'claim',
         functionArgs: [],
         postConditions,
        // attachment: '0x',
@@ -71,8 +74,10 @@ export const ZolanaMintNopeWoo = () => {
             <code>{JSON.stringify(response, null, 2)}</code>
           </pre>
         )}
-        <button onClick={() => handleOpenContractCall()}>
-          {isRequestPending ? 'request pending...' : 'Mint WOO Nothing'}
+        <button 
+              style={{ background: "green" }}
+        onClick={() => handleOpenContractCall()}>
+          {isRequestPending ? 'request pending...' : 'MINT STACKS INVADERS'}
         </button>
       </div>
     );
