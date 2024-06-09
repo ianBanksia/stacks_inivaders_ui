@@ -1,5 +1,8 @@
 import stacksInvadersLogo from './assets/stacks-invaders-logo.png';
 import rooLogo from './assets/roo_logo.png';
+import stacksLogo from './assets/stacksLogo.png';
+import bitcoinLogo from './assets/bitcoinLogo.png';
+import stacksInvadersTitle from './assets/logoTitle.png';
 import stacksInvadersSample from './assets/animatedStacksInvaders.gif';
 
 import { useAccount } from '@micro-stacks/react';
@@ -59,10 +62,14 @@ function Contents() {
             alt="$ROO logo"
           />
         </a>
-        <p className="read-the-docs-white-large">
+        {/* <p className="read-the-docs-white-large">
       STACKS INVADERS
-      </p>  
-
+      </p>   */}
+      <img
+            src={stacksInvadersTitle}
+            className="logo stacks invaders"
+            alt="Stacks Invaders"
+          />
         <a
           href="https://github.com/ianBanksia/stacks-invaders/blob/main/README.md"
           target="_blank"
@@ -113,8 +120,18 @@ function Contents() {
         We have no control over which transactions gets in first, nor a way to refund any STX used as trx fee. Please go easy and be mindfull: there's no advantage in having more than one trx per block.
       </p>                     
       <br />
+      <br />
 
-
+      <img
+            src={stacksLogo} 
+            className="logo ROO"
+            alt="$ROO logo"
+          /> 
+      <img
+            src={bitcoinLogo} 
+            className="logo ROO"
+            alt="$ROO logo"
+          />           
       </div>
     </>
   );
