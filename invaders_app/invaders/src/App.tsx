@@ -5,6 +5,8 @@ import bitcoinLogo from './assets/bitcoinLogo.png';
 import stacksInvadersTitle from './assets/logoTitle.png';
 import stacksInvadersSample from './assets/animatedStacksInvaders.gif';
 
+import inv11Image from './assets/invaders/unit11.svg';
+
 import { useAccount } from '@micro-stacks/react';
 import { useState } from 'react';
 
@@ -15,7 +17,8 @@ import { WalletConnectButton } from './components/wallet-connect-button';
 import { UserCard } from './components/user-card';
 import { Logo } from './components/ustx-logo';
 import { InvadersPreview } from './components/invaders-image';
-//import { InvadersPreviewCarousel } from './components/invaders-image-carousel';
+import { InvadersPreviewBlock } from './components/invaders-image-block';
+import { InvadersPreviewCarousel } from './components/invaders-image-carousel';
 import { MintInvaders } from './components/mint-invaders';
 
 import { ZolanaStatus } from './components/zolana-status';
@@ -91,7 +94,12 @@ function Contents() {
         <div className='blue-column'>
         <InvadersPreview />
         </div>   
-        </div>          
+        </div>  
+        <div className='column'>
+        <div className='blue-column'>
+        <InvadersPreviewBlock />
+        </div>   
+        </div>                  
         <div className='column'>
           <div className='blue-column'>
           <MintInvaders />
@@ -109,6 +117,9 @@ function Contents() {
         PRICE: Starts at 1 STX and going up until ~10 STX - Post Conditions may have a higher amount, but ony the current price will be charged.
       </p>     
       <p className="read-the-docs">
+        INVADERS: You can click on the options above to download the previews files directly from the Smart Contract. These are SVG images with trasnparent background, a block explorer will go online later in the week.
+      </p>           
+      <p className="read-the-docs">
         $ROO Holders with more than 10k have one free mint - No garantees on the mint, as there's potential for block competition.
       </p>           
       <p className="read-the-docs">
@@ -119,17 +130,15 @@ function Contents() {
       </p>                     
       <br />
       <br />
- 
-      {/* <img
-            src={stacksLogo} 
-            className="logo ROO"
-            alt="$ROO logo"
-          /> 
+      <div className='blue-column'>
       <img
-            src={bitcoinLogo} 
+            src={inv11Image} 
             className="logo ROO"
             alt="$ROO logo"
-          />            */}
+          />
+      <InvadersPreviewCarousel />
+
+      </div>
       </div>
     </>
   );
