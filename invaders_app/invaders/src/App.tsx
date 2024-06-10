@@ -15,6 +15,7 @@ import { WalletConnectButton } from './components/wallet-connect-button';
 import { UserCard } from './components/user-card';
 import { Logo } from './components/ustx-logo';
 import { InvadersPreview } from './components/invaders-image';
+//import { InvadersPreviewCarousel } from './components/invaders-image-carousel';
 import { MintInvaders } from './components/mint-invaders';
 
 import { ZolanaStatus } from './components/zolana-status';
