@@ -15,6 +15,7 @@ import {
   import { useOpenContractCall } from '@micro-stacks/react';  
   import { callReadOnlyFunction } from 'micro-stacks/transactions';
   import { cvToTrueValue } from 'micro-stacks/clarity';
+  import siBackground from './data/background.png';
 
 
 // ZOLANA ON
@@ -62,7 +63,8 @@ export const InvadersPreviewToken = () => {
             const canvas = document.createElement('canvas');
               
             const baseImage = new Image();
-            baseImage.src = '/src/components/data/background.png';
+            baseImage.src = '/assets/background.de110475.png'; 
+            //https://www.stacks-invaders.xyz/assets/background.de110475.png
             baseImage.onload = () => {
               canvas.width = baseImage.width;
               canvas.height = baseImage.height;

@@ -62,7 +62,11 @@ export const InvadersPreviewBlock = () => {
             const canvas = document.createElement('canvas');
               
             const baseImage = new Image();
-            baseImage.src = '/src/components/data/background.png';
+            baseImage.src = '/assets/background.de110475.png'; 
+
+          //  baseImage.src = '/src/components/data/background.png';
+          //  baseImage.src = 'https://nak-ops.com/stacks-invaders/images/4eef20ef5d853a57a956f7ecc0b7ea56.png';
+          //  baseImage.crossOrigin="anonymous" ;
             baseImage.onload = () => {
               canvas.width = baseImage.width;
               canvas.height = baseImage.height;
