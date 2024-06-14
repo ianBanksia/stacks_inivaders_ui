@@ -18,7 +18,7 @@ import {
 
 
 // ZOLANA ON
-export const InvadersPreviewBlock = () => {
+export const InvadersPreviewToken = () => {
     const { stxAddress } = useAccount();
     const [response, setResponse] = useState('');
     const [cssValue01, setCssValue01] = useState("read-the-docs");
@@ -29,7 +29,7 @@ export const InvadersPreviewBlock = () => {
     const [responsePriceNFT, setResponsePrice] = useState(cvToTrueValue(stringAsciiCV('0')));
 
     const checkStatus = async () => {
-      let Iwallet = '153200' ; //DUMMY VALUE
+      let Iwallet = '4' ; //DUMMY VALUE
       Iwallet = inputValue;
       const functionArgs = [
         uintCV(Iwallet)
@@ -38,7 +38,7 @@ export const InvadersPreviewBlock = () => {
     await callReadOnlyFunction({
           contractAddress: 'SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ',
           contractName: 'stacks-invaders-v0',
-          functionName: 'get-dmt-for-block-height',
+          functionName: 'get-token-svg',
           functionArgs: functionArgs,
           senderAddress: stxAddress
         }).then((response) => {console.log(response) 
@@ -102,12 +102,12 @@ export const InvadersPreviewBlock = () => {
 
         //TODO: create elements that get the block-heigh and regenerate based on block height (input field?)
        })}>
-          {'GET IMAGE BY BLOCK'}
+          {'GET IMAGE BY TOKEN'}
         </button>   
         <br/>   
         <p>     </p>
         <label>
-        Block #  
+        Token #  
         <input 
           type="text"
           value={inputValue}
