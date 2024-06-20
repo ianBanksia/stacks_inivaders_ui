@@ -62,6 +62,7 @@ export const InvadersPreviewBlock = () => {
             const canvas = document.createElement('canvas');
               
             const baseImage = new Image();
+            //https://www.stacks-invaders.xyz/assets/background.de110475.png
             baseImage.src = '/assets/background.de110475.png'; 
 
           //  baseImage.src = '/src/components/data/background.png';

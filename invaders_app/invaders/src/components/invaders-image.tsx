@@ -57,7 +57,8 @@ export const InvadersPreview = () => {
             const canvas = document.createElement('canvas');
               
             const baseImage = new Image();
-            baseImage.src = '/src/components/data/background.png';
+            baseImage.src = '/assets/background.de110475.png'; 
+            // baseImage.src = '/src/components/data/background.png';
             baseImage.onload = () => {
               canvas.width = baseImage.width;
               canvas.height = baseImage.height;
