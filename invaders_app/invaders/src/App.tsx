@@ -18,6 +18,7 @@ import { UserCard } from './components/user-card';
 import { Logo } from './components/ustx-logo';
 import { InvadersPreview } from './components/invaders-image';
 import { InvadersPreviewBlock } from './components/invaders-image-block';
+import { InvadersTokenBlock } from './components/invaders-token-block';
 import { InvadersPreviewToken } from './components/invaders-image-token';
 import { InvadersPreviewCarousel } from './components/invaders-image-carousel';
 import { MintInvaders } from './components/mint-invaders';
@@ -96,11 +97,16 @@ function Contents() {
         <InvadersPreview /> 
         </div>   
         </div>  
-        <div className='column'>
+        {/* <div className='column'>
         <div className='blue-column'>
         <InvadersPreviewToken /> 
         </div>   
-        </div>          
+        </div>          */}
+        {/* <div className='column'>
+        <div className='blue-column'>
+        <InvadersTokenBlock /> 
+        </div>   
+        </div>                   */}
         <div className='column'>
         <div className='blue-column'>
         <InvadersPreviewBlock />
