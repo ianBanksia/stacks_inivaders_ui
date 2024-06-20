@@ -92,16 +92,16 @@ function Contents() {
         <ZolanaStatus />
         </div>   
         </div>   
-        <div className='column'>
+        {/* <div className='column'>
         <div className='blue-column'>
         <InvadersPreview /> 
         </div>   
-        </div>  
-        {/* <div className='column'>
+        </div>   */}
+        <div className='column'>
         <div className='blue-column'>
         <InvadersPreviewToken /> 
         </div>   
-        </div>          */}
+        </div>         
         {/* <div className='column'>
         <div className='blue-column'>
         <InvadersTokenBlock /> 
