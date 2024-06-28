@@ -47,7 +47,7 @@ const roo_token = createAssetInfo(
       const postConditions = [ makeStandardSTXPostCondition(
         stxAddress!,
         FungibleConditionCode.LessEqual,
-        '2000000'
+        '2500000'
       ),
     ]; 
 
