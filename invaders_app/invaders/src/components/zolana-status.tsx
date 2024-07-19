@@ -43,8 +43,8 @@ export const ZolanaStatus = () => {
         const priceValue = cvToValue(priceNFT);
         const priceString = cvToString(priceNFT);
         const priceProperString = priceString.toString();
-        const priceSubString = priceProperString.substring(1,2);
-        const priceSubStringDecimal = priceProperString.substring(2,3);
+        const priceSubString = priceProperString.substring(1,3);
+        const priceSubStringDecimal = priceProperString.substring(3,4);
         const priceFullString = priceSubString + '.' + priceSubStringDecimal;
         console.log(priceNFT);
         console.log(priceValue);
