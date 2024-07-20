@@ -86,60 +86,33 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
-      <div className={'row'}>
-         <div className='column'>
-        <div className='blue-column'>
-        <ZolanaStatus />
-        </div>   
-        </div>   
-        <div className='column'>
-        <div className='blue-column'>
-        <InvadersPreview /> 
-        </div>   
-        </div>  
-        <div className='column'>
-        <div className='blue-column'>
-        <InvadersPreviewToken /> 
-        </div>   
-        </div>         
-        {/* <div className='column'>
-        <div className='blue-column'>
-        <InvadersTokenBlock /> 
-        </div>   
-        </div>                   */}
-        <div className='column'>
-        <div className='blue-column'>
-        <InvadersPreviewBlock />
-        </div>   
-        </div>                  
-        <div className='column'>
-          <div className='blue-column'>
-          <MintInvaders />
-        </div>  
-        </div>    
-      </div>
       <br />     
       <div id="imageReceiver" className="read-the-docs">
-      </div>       
-      <br />     
+      </div>    
       <p className="read-the-docs">
-        This is a community built, based, and mantained website. Please click on the Stacks Invaders logo, read the terms and conditions, and understand the risks before using this website.
+       <b>*** MINT IS NOW COMPLETED! ***</b>
+      </p>          
+      <br />
+      <a
+          href="https://stacks.gamma.io/collections/stacks-invaders"
+          target="_blank"
+        >        
+      <p className="read-the-docs">
+       <b>*** Trade is live at Gamma and Tradeport ***</b>
       </p>  
+      </a>        
+      <br />           
       <p className="read-the-docs">
-        PRICE: Starts at 1 STX and going up until ~10 STX - Post Conditions may have a higher amount, but ony the current price will be charged.
-      </p>     
-      <p className="read-the-docs">
-        INVADERS: You can click on the options above to download the previews files directly from the Smart Contract. These are SVG images with trasnparent background, a block explorer will go online later in the week.
-      </p>           
-      <p className="read-the-docs">
-        $ROO Holders with more than 10k have one free mint - No garantees on the mint, as there's potential for block competition.
-      </p>           
-      <p className="read-the-docs">
-       <b>*** THERE IS ONLY ONE STACKS INVADER PER BLOCK -- COMPETITION MAY TAKE PLACE FOR THE BLOCK, AND TRANSACTIONS MAY FAIL ***</b>
+        Mint is completed, but the project is just getting started.
       </p> 
+      <a
+          href="https://app.console.xyz/c/roo"
+          target="_blank"
+        >      
       <p className="read-the-docs">
-        We have no control over which transactions gets in first, nor a way to refund any STX used as trx fee. Please go easy and be mindfull: there's no advantage in having more than one trx per block.
-      </p>                     
+        Join us in our Console Community to know more about the next steps.
+      </p>
+      </a>                  
       <br />
       <br />
       <div className='blue-column'>
@@ -148,8 +121,6 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />
-      <InvadersPreviewCarousel />
-
       </div>
       </div>
     </>
