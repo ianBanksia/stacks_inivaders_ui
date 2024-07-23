@@ -86,7 +86,20 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
-      <br />     
+      <br /> 
+      <div className={'row'}> 
+        <div className='column'>
+        <div className='blue-column'>
+        <InvadersPreviewToken /> 
+        </div>   
+        </div>         
+        <div className='column'>
+        <div className='blue-column'>
+        <InvadersPreviewBlock />
+        </div>   
+        </div>                  
+      </div>
+      <br />       
       <div id="imageReceiver" className="read-the-docs">
       </div>    
       <p className="read-the-docs">
