@@ -20,12 +20,14 @@ import {
     makeStandardSTXPostCondition } from 'micro-stacks/transactions';
 
 // Mint Stacks Invaders SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ.stacks-invaders-v0
-export const MintInvaders = () => {
+export const MintInvadersLotto = () => {
     const { openContractCall, isRequestPending } = useOpenContractCall();
     const { stxAddress } = useAccount();
     const [response, setResponse] = useState(null);
-   
-// $ROO
+    const [inputValue, setInputValue] = useState("");   
+    const [inputValuePrice, setInputValuePrice] = useState("");   
+
+    // $ROO
 const roo_token = createAssetInfo(
   'SP2C1WREHGM75C7TGFAEJPFKTFTEGZKF6DFT6E2GE',
   'kangaroo',
@@ -74,11 +76,26 @@ const roo_token = createAssetInfo(
             <code>{JSON.stringify(response, null, 2)}</code>
           </pre>
         )}
+          <p
+          style={{
+            display: 'block',
+            marginTop: '10px',
+          }} className="read-the-docs-black"
+        >        
         <button 
-              style={{ background: "green" }}
+              style={{ background: "purple" }}
         onClick={() => handleOpenContractCall()}>
-          {isRequestPending ? 'request pending...' : 'MINT STACKS INVADERS'}
-        </button>
+          {isRequestPending ? 'request pending...' : 'LOTTO TICKET'}
+        </button> </p>
+        <p>     </p>
+        <label>
+        Token ID:  
+        <input 
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        </label>              
       </div>
     );
   };

@@ -1,6 +1,12 @@
-import reactLogo from './assets/react.svg';
 import stacksInvadersLogo from './assets/stacks-invaders-logo.png';
 import rooLogo from './assets/roo_logo.png';
+import stacksLogo from './assets/stacksLogo.png';
+import bitcoinLogo from './assets/bitcoinLogo.png';
+import stacksInvadersTitle from './assets/logoTitle.png';
+import stacksInvadersSample from './assets/animatedStacksInvaders.gif';
+
+import inv11Image from './assets/invaders/unit11.svg';
+
 import { useAccount } from '@micro-stacks/react';
 import { useState } from 'react';
 
@@ -10,31 +16,27 @@ import * as MicroStacks from '@micro-stacks/react';
 import { WalletConnectButton } from './components/wallet-connect-button';
 import { UserCard } from './components/user-card';
 import { Logo } from './components/ustx-logo';
-import { ZolanaOn } from './components/zolana-on';
-import { ZolanaOff } from './components/zolana-off';
-import { ZolanaCensor } from './components/zolana-censor';
-import { ZolanaWhitelist } from './components/zolana-whitelist';
-import { ZolanaMintLeo } from './components/zolana-mint-leo';
-import { ZolanaMintWelsh } from './components/zolana-mint-welsh';
-import { Spacer } from './components/spacer';
-// ZOLANA ON
+import { InvadersPreview } from './components/invaders-image';
+import { InvadersPreviewBlock } from './components/invaders-image-block-new';
+import { InvadersTokenBlock } from './components/invaders-token-block';
+import { InvadersPreviewToken } from './components/invaders-image-token';
+import { InvadersPreviewCarousel } from './components/invaders-image-carousel';
+import { MintInvaders } from './components/mint-invaders';
+import { MintInvadersGold } from './components/mint-invaders-gold';
+import { MintInvadersSilver } from './components/mint-invaders-silver';
+import { MintInvadersLotto } from './components/mint-invaders-lotto';
 
-// AUTHORISE USER
-
-// CENSOR USER
-
-// MINT USING WELSH
-
-// MINT USING LEO
-
-// TRANSFER TO NEW USER
 
 //Page content
 function Contents() {
   return (
     <>
-        <div className="wrapper">
-        <UserCard />
+        <div className="wrapper"   >
+        {/* style={{ backgroundImage: <img
+            src={stacksInvadersBackground}
+            className="logo ROO"
+            alt="$ROO logo"
+          /> }} */}
         <div className={'row'}>
         <div className='column'>
           <div className='blue-column'>
@@ -42,9 +44,9 @@ function Contents() {
           style={{
             display: 'block',
             marginTop: '10px',
-          }}
+          }} className="read-the-docs-white"
         >
-         Connect your wallet to start using ZOLANA.
+         Connect your wallet to mint your Stacks Invaders.
         </p>          </div>
         </div>
         <div className='column'>
@@ -52,73 +54,88 @@ function Contents() {
           <WalletConnectButton />
           </div>
         </div>
-      </div>        
-
-        <h1> $ROO Community Project #1: ZOLANA</h1>
+      </div>       
+ 
+      <UserCard />
 
       <div className={'logos'}>
-        <a
-          href="https://www.roo-stx.com"
-          target="_blank"
-          className={'roo-logo'}
-        >
-          <img
-            src={rooLogo}
-            className="logo ROO"
-            alt="$ROO logo"
+      <img
+            src={stacksInvadersLogo}
+            className="logo stacks invaders"
+            alt="Stacks Invaders"
           />
-        </a>
+        {/* <p className="read-the-docs-white-large">
+      STACKS INVADERS
+      </p>   */}
+      <img
+            src={stacksInvadersTitle}
+            className="logo stacks invaders"
+            alt="Stacks Invaders"
+          />
         <a
-          href="https://half-badger-159.notion.site/ZOLANA-c5a9d710f8c6468ea2ec87a36076c083?pvs=74"
+          href="https://github.com/ianBanksia/stacks-invaders/blob/main/README.md"
           target="_blank"
         >
           <img
             src={stacksInvadersLogo}
-            className="logo zolana"
-            alt="ZOLANA logo"
+            className="logo stacks invaders"
+            alt="Stacks Invaders"
           />
         </a>
       </div>
-      <p className="read-the-docs">
-        This is a community built, based, and mantained website. Please click on the ZOLANA logo, read the terms and conditions, and understand the risks before using this website.
-      </p>   
-      <br />
+      <img
+            src={stacksInvadersSample} 
+            className="logo ROO"
+            alt="$ROO logo"
+          />      
       <div className={'row'}>
+         <div className='column'>
+        <div className='blue-column'>
+        <p
+          style={{
+            display: 'block',
+            marginTop: '10px',
+          }} className="read-the-docs-black"
+        >
+        <MintInvadersGold />
+        </p>
+        </div>   
+        </div>   
+        <div className='column'>
+        <div className='blue-column'>
+        <MintInvadersSilver />
+        </div>   
+        </div>                  
         <div className='column'>
           <div className='blue-column'>
-          <ZolanaOn />
-        </div>
-        </div>
-        <div className='column'>
-          <div className='green-column'>
-          <ZolanaOff />
-          </div>
-        </div>
-        <div className='column'>
-          <div className='green-column'>
-          <ZolanaMintLeo />    
-          </div>
+          <MintInvadersLotto />
+        </div>  
         </div>    
-        <div className='column'>
-          <div className='green-column'>
-          <ZolanaMintWelsh />                       
-          </div>
-        </div>          
-        <div className='column'>
-          <div className='green-column'>
-          <ZolanaWhitelist />
-          </div>
-        </div>
-        <div className='column'>
-          <div className='green-column'>
-          <ZolanaCensor />    
-          </div>
-        </div>                   
       </div>
+      <br />     
+      <div id="imageReceiver" className="read-the-docs">
+      </div>       
+      <br />     
+      <p className="read-the-docs">
+       <b>*** WELCOME TO THE NEXT PHASE ***</b>
+      </p>          
+      <p className="read-the-docs">
+       <b>*** GOLD & SILVER UPGRADES + SPECIAL THEME LOTTO ARE AVAILABLE. ***</b>
+      </p> 
+      <p className="read-the-docs">
+        We have no control over which transactions gets in first, nor a way to refund any STX used as trx fee. Please go easy and be mindfull: there's no advantage in having more than one trx per block.
+      </p>                     
       <br />
-        
+      <br />
+      <div className='blue-column'>
+      <img
+            src={inv11Image} 
+            className="logo ROO"
+            alt="$ROO logo"
+          />
+      <InvadersPreviewCarousel />
 
-
+      </div>
       </div>
     </>
   );
@@ -127,8 +144,8 @@ function Contents() {
 export default function App() {
   return (
     <MicroStacks.ClientProvider
-      appName={'ZOLANA'}
-      appIconUrl={zolanaLogo}
+      appName={'StacksInvaders'}
+      appIconUrl={stacksInvadersLogo}
     >
       <Contents />
     </MicroStacks.ClientProvider>

@@ -17,13 +17,15 @@ import { WalletConnectButton } from './components/wallet-connect-button';
 import { UserCard } from './components/user-card';
 import { Logo } from './components/ustx-logo';
 import { InvadersPreview } from './components/invaders-image';
-import { InvadersPreviewBlock } from './components/invaders-image-block';
+import { InvadersPreviewBlock } from './components/invaders-image-block-new';
 import { InvadersTokenBlock } from './components/invaders-token-block';
 import { InvadersPreviewToken } from './components/invaders-image-token';
 import { InvadersPreviewCarousel } from './components/invaders-image-carousel';
 import { MintInvaders } from './components/mint-invaders';
+import { MintInvadersGold } from './components/mint-invaders-gold';
+import { MintInvadersSilver } from './components/mint-invaders-silver';
+import { MintInvadersLotto } from './components/mint-invaders-lotto';
 
-import { ZolanaStatus } from './components/zolana-status';
 
 //Page content
 function Contents() {
@@ -86,46 +88,43 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
-      <br /> 
-      <div className={'row'}> 
-        <div className='column'>
+      <div className={'row'}>
+         <div className='column'>
         <div className='blue-column'>
-        <InvadersPreviewToken /> 
+        <p
+          style={{
+            display: 'block',
+            marginTop: '10px',
+          }} className="read-the-docs-black"
+        >
+        <MintInvadersGold />
+        </p>
         </div>   
-        </div>         
+        </div>   
         <div className='column'>
         <div className='blue-column'>
-        <InvadersPreviewBlock />
+        <MintInvadersSilver />
         </div>   
         </div>                  
+        <div className='column'>
+          <div className='blue-column'>
+          <MintInvadersLotto />
+        </div>  
+        </div>    
       </div>
-      <br />       
+      <br />     
       <div id="imageReceiver" className="read-the-docs">
-      </div>    
+      </div>       
+      <br />     
       <p className="read-the-docs">
-       <b>*** MINT IS NOW COMPLETED! ***</b>
+       <b>*** WELCOME TO THE NEXT PHASE ***</b>
       </p>          
-      <br />
-      <a
-          href="https://stacks.gamma.io/collections/stacks-invaders"
-          target="_blank"
-        >        
       <p className="read-the-docs">
-       <b>*** Trade is live at Gamma and Tradeport ***</b>
-      </p>  
-      </a>        
-      <br />           
-      <p className="read-the-docs">
-        Mint is completed, but the project is just getting started.
+       <b>*** GOLD & SILVER UPGRADES + SPECIAL THEME LOTTO ARE AVAILABLE. ***</b>
       </p> 
-      <a
-          href="https://app.console.xyz/c/roo"
-          target="_blank"
-        >      
       <p className="read-the-docs">
-        Join us in our Console Community to know more about the next steps.
-      </p>
-      </a>                  
+        We have no control over which transactions gets in first, nor a way to refund any STX used as trx fee. Please go easy and be mindfull: there's no advantage in having more than one trx per block.
+      </p>                     
       <br />
       <br />
       <div className='blue-column'>
@@ -134,6 +133,8 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />
+      <InvadersPreviewCarousel />
+
       </div>
       </div>
     </>

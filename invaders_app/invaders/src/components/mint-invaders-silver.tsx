@@ -20,12 +20,14 @@ import {
     makeStandardSTXPostCondition } from 'micro-stacks/transactions';
 
 // Mint Stacks Invaders SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ.stacks-invaders-v0
-export const MintInvaders = () => {
+export const MintInvadersSilver = () => {
     const { openContractCall, isRequestPending } = useOpenContractCall();
     const { stxAddress } = useAccount();
     const [response, setResponse] = useState(null);
-   
-// $ROO
+    const [inputValue, setInputValue] = useState("");   
+    const [inputValuePrice, setInputValuePrice] = useState("");   
+
+    // $ROO
 const roo_token = createAssetInfo(
   'SP2C1WREHGM75C7TGFAEJPFKTFTEGZKF6DFT6E2GE',
   'kangaroo',
@@ -43,19 +45,23 @@ const roo_token = createAssetInfo(
     ];
    
     const handleOpenContractCall = async () => {
-
+      const inputStx = inputValuePrice || '10';
+      const stxMax = inputStx.concat('000000');
       const postConditions = [ makeStandardSTXPostCondition(
         stxAddress!,
         FungibleConditionCode.LessEqual,
-        '1500000'
+        stxMax
       ),
     ]; 
-
+    const tokenID = inputValue;
+    const functionArgsCall = [
+      uintCV(tokenID)
+    ];
       await openContractCall({
         contractAddress: 'SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ',
-        contractName: 'stacks-invaders-v0',
-        functionName: 'claim',
-        functionArgs: [],
+        contractName: 'stacks-invaders-gss-v0',
+        functionName: 'upgrade-silver-trait',
+        functionArgs: functionArgsCall,
         postConditions,
        // attachment: '0x',
         onFinish: async data => {
@@ -74,11 +80,35 @@ const roo_token = createAssetInfo(
             <code>{JSON.stringify(response, null, 2)}</code>
           </pre>
         )}
+          <p
+          style={{
+            display: 'block',
+            marginTop: '10px',
+          }} className="read-the-docs-black"
+        >        
         <button 
-              style={{ background: "green" }}
+              style={{ background: "silver" }}
         onClick={() => handleOpenContractCall()}>
-          {isRequestPending ? 'request pending...' : 'MINT STACKS INVADERS'}
-        </button>
+          {isRequestPending ? 'request pending...' : 'SILVER UPGRADE'}
+        </button> </p>
+        <p>     </p>
+        <label>
+        Token ID:  
+        <input 
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        </label>        
+        <p>     </p>
+        <label>
+        STX max:   
+        <input 
+          type="text"
+          value={inputValuePrice}
+          onChange={(e) => setInputValuePrice(e.target.value)}
+        />        
+      </label>        
       </div>
     );
   };
