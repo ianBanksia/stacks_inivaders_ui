@@ -97,13 +97,13 @@ function Contents() {
             marginTop: '10px',
           }} className="read-the-docs-black"
         >
-        <InvadersTokenBlock />
+        <InvadersPreviewBlock />
         </p>
         </div>   
         </div>   
         <div className='column'>
         <div className='blue-column'>
-        <InvadersTokenBlock />
+        <InvadersPreviewToken />
         </div>   
         </div>                    
       </div>         
