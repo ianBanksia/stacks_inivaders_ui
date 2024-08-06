@@ -88,7 +88,6 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
-<<<<<<< HEAD
        <div className={'row'}>
          <div className='column'>
         <div className='blue-column'>
