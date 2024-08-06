@@ -88,6 +88,7 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
+<<<<<<< HEAD
       <div className={'row'}>
          <div className='column'>
         <div className='blue-column'>
@@ -107,6 +108,8 @@ function Contents() {
         </div>   
         </div>                    
       </div>
+=======
+>>>>>>> parent of c6e0a00 (Adding preview button back again)
       <br />     
       <div id="imageReceiver" className="read-the-docs">
       </div>       
