@@ -63,7 +63,7 @@ export const InvadersPreviewToken = () => {
             const canvas = document.createElement('canvas');
               
             const baseImage = new Image();
-            baseImage.src = '/src/components/data/pixelSpace600.png';
+            baseImage.src = '/assets/pixelSpace600.png';
 //            'https://www.stacks-invaders.xyz/assets/background.de110475.png';
             baseImage.onload = () => {
               canvas.width = baseImage.width;
