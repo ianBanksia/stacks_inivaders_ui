@@ -4,6 +4,8 @@ import stacksLogo from './assets/stacksLogo.png';
 import bitcoinLogo from './assets/bitcoinLogo.png';
 import stacksInvadersTitle from './assets/logoTitle.png';
 import stacksInvadersSample from './assets/animatedStacksInvaders.gif';
+import stacksPixelBackground from './assets/pixelSpace600.png';
+
 
 import inv11Image from './assets/invaders/unit11.svg';
 
@@ -145,7 +147,11 @@ function Contents() {
             alt="$ROO logo"
           />
       <InvadersPreviewCarousel />
-
+      <img
+            src={stacksPixelBackground} 
+            className="logo ROO"
+            alt="$ROO logo"
+          />   
       </div>
       </div>
     </>
