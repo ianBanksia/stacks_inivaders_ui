@@ -38,8 +38,8 @@ export const InvadersPreviewToken = () => {
 
     await callReadOnlyFunction({
           contractAddress: 'SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ',
-          contractName: 'stacks-invaders-80',
-          functionName: 'get-80-special-design',
+          contractName: 'stacks-invaders-v0',
+          functionName: 'get-token-svg',
           functionArgs: functionArgs,
           senderAddress: stxAddress
         }).then((response) => {console.log(response) 
@@ -63,8 +63,8 @@ export const InvadersPreviewToken = () => {
             const canvas = document.createElement('canvas');
               
             const baseImage = new Image();
-            baseImage.src = '/src/components/data/pixelSpace600.png';
-//            'https://www.stacks-invaders.xyz/assets/background.de110475.png';
+            baseImage.src = '/assets/background.de110475.png'; 
+            //https://www.stacks-invaders.xyz/assets/background.de110475.png
             baseImage.onload = () => {
               canvas.width = baseImage.width;
               canvas.height = baseImage.height;
@@ -104,12 +104,12 @@ export const InvadersPreviewToken = () => {
 
         //TODO: create elements that get the block-heigh and regenerate based on block height (input field?)
        })}>
-          {'PREVIEW SPECIAL DESIGN'}
+          {'GET IMAGE BY TOKEN'}
         </button>   
         <br/>   
         <p>     </p>
         <label>
-        Number (1-40) #  
+        Token #  
         <input 
           type="text"
           value={inputValue}

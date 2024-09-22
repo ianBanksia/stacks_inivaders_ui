@@ -88,7 +88,7 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
-      <div className={'row'}>
+       <div className={'row'}>
          <div className='column'>
         <div className='blue-column'>
         <p
@@ -97,29 +97,36 @@ function Contents() {
             marginTop: '10px',
           }} className="read-the-docs-black"
         >
-        <MintInvadersGold />
+        <InvadersPreviewBlock />
         </p>
         </div>   
         </div>   
         <div className='column'>
         <div className='blue-column'>
-        <InvadersPreviewToken /> 
+        <InvadersPreviewToken />
         </div>   
-        </div>                              
-      </div>
+        </div>                    
+      </div>         
       <br />     
       <div id="imageReceiver" className="read-the-docs">
       </div>       
       <br />     
       <p className="read-the-docs">
-       <b>*** WELCOME TO THE NEXT PHASE ***</b>
+       <b>*** MINT IS CLOSE ***</b>
       </p>          
+      <br />
+      <a
+          href="https://stacks.gamma.io/collections/stacks-invaders"
+          target="_blank"
+        >        
       <p className="read-the-docs">
-       <b>*** RAFFLE TICKET FOR SPECIAL UPGRADE ***</b>
-      </p> 
+      <b>*** Trade is live at Gamma and Tradeport ***</b>
+      </p>  
+      </a>        
+      <br />     
       <p className="read-the-docs">
-        Maximum of one ticket per invader, 3 STX. There will be 39 draws, 1 winner per draw. Every ticket is kept in the ballot up to the last draw.
-      </p>                     
+      Mint is completed, but the project is just getting started.
+      </p>                              
       <br />
       <a
           href="https://app.console.xyz/c/roo"
@@ -129,21 +136,15 @@ function Contents() {
       <b>***         Join us in our Console Community to know more about the next steps      ***</b>
       </p>  
       </a>         
-      <a
-          href="https://stacks.gamma.io/collections/stacks-invaders"
-          target="_blank"
-        >        
-      <p className="read-the-docs">
-      <b>*** Trade is live at Gamma and Tradeport ***</b>
-      </p>  
-      </a>              
       <br />
+      
       <div className='blue-column'>
       <img
             src={inv11Image} 
             className="logo ROO"
             alt="$ROO logo"
           />
+
       <InvadersPreviewCarousel />
 
       </div>
