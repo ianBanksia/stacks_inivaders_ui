@@ -109,7 +109,7 @@ export const InvadersPreviewToken = () => {
         <br/>   
         <p>     </p>
         <label>
-        Number (1-40) #  
+        Number (1-41) #  
         <input 
           type="text"
           value={inputValue}
