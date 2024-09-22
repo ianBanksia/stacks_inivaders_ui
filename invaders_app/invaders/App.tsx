@@ -104,13 +104,7 @@ function Contents() {
         <div className='column'>
         <div className='blue-column'>
         <MintInvadersSilver />
-        </div>   
-        </div>                  
-        <div className='column'>
-          <div className='blue-column'>
-          <MintInvadersLotto />
-        </div>  
-        </div>    
+        </div>     
       </div>
       <br />     
       <div id="imageReceiver" className="read-the-docs">
@@ -120,7 +114,7 @@ function Contents() {
        <b>*** WELCOME TO THE NEXT PHASE ***</b>
       </p>          
       <p className="read-the-docs">
-       <b>*** GOLD & SILVER UPGRADES + SPECIAL THEME LOTTO ARE AVAILABLE. ***</b>
+       <b>*** GOLD & SILVER UPGRADES ***</b>
       </p> 
       <p className="read-the-docs">
         We have no control over which transactions gets in first, nor a way to refund any STX used as trx fee. Please go easy and be mindfull: there's no advantage in having more than one trx per block.

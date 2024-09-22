@@ -45,7 +45,7 @@ const roo_token = createAssetInfo(
     ];
    
     const handleOpenContractCall = async () => {
-      const inputStx = '3';
+      const inputStx = inputValuePrice || '20';
       const stxMax = inputStx.concat('000000');
       const postConditions = [ makeStandardSTXPostCondition(
         stxAddress!,
@@ -59,8 +59,8 @@ const roo_token = createAssetInfo(
     ];
       await openContractCall({
         contractAddress: 'SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ',
-        contractName: 'stacks-invaders-80',
-        functionName: 'upgrade-lotto-trait',
+        contractName: 'stacks-invaders-gss-v0',
+        functionName: 'upgrade-gold-trait',
         functionArgs: functionArgsCall,
         postConditions,
        // attachment: '0x',
@@ -74,7 +74,7 @@ const roo_token = createAssetInfo(
       });
     };
     return (
-      <div className="read-the-docs" >
+      <div>
         {response && (
           <pre>
             <code>{JSON.stringify(response, null, 2)}</code>
@@ -87,19 +87,28 @@ const roo_token = createAssetInfo(
           }} className="read-the-docs-black"
         >        
         <button 
-              style={{ background: "purple" }}
+              style={{ background: "orange" }}
         onClick={() => handleOpenContractCall()}>
-          {isRequestPending ? 'request pending...' : 'BUY TICKET'}
+          {isRequestPending ? 'request pending...' : 'GOLD UPGRADE'}
         </button> </p>
         <p>     </p>
         <label>
-        Token ID #  
+        Token ID:  
         <input 
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        </label>            
+        </label>        
+        <p>     </p>
+        <label>
+        STX max:   
+        <input 
+          type="text"
+          value={inputValuePrice}
+          onChange={(e) => setInputValuePrice(e.target.value)}
+        />        
+      </label>        
       </div>
     );
   };
