@@ -110,7 +110,7 @@ export const InvadersPreviewBlock = () => {
 
         //TODO: create elements that get the block-heigh and regenerate based on block height (input field?)
        })}>
-          {'GET IMAGE BY BLOCK'}
+          {'SUBMIT TAPROOT'}
         </button>   
         <br/>   
         <p>     </p>
