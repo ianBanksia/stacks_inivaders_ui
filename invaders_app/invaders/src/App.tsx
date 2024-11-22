@@ -89,7 +89,7 @@ function Contents() {
             className="logo ROO"
             alt="$ROO logo"
           />      
-       {/* <div className={'row'}>
+       <div className={'row'}>
          <div className='column'>
         <div className='blue-column'>
         <p
@@ -112,7 +112,7 @@ function Contents() {
         <InvadersPreviewToken />
         </div>   
         </div>                    
-      </div>          */}
+      </div>         
       <br />     
       <div id="imageReceiver" className="read-the-docs">
       </div>       
