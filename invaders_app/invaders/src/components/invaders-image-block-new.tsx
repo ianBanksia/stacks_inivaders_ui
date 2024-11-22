@@ -42,13 +42,14 @@ export const InvadersPreviewBlock = () => {
       const pontisROOOOONS = createAssetInfo(
         'SP14NS8MVBRHXMM96BQY0727AJ59SWPV7RMHC0NCG',
         'pontis-bridge-ROONS',
-        'pontis-bridge-ROONS'
+        'ROOOOOOOOOONS'
       )      
-      const postConditions = [ makeStandardSTXPostCondition(
-        stxAddress!,
-        FungibleConditionCode.LessEqual,
-        stxMax
-      ),
+      const postConditions = [ 
+      //   makeStandardSTXPostCondition(
+      //   stxAddress!,
+      //   FungibleConditionCode.LessEqual,
+      //   stxMax
+      // ),
       makeContractFungiblePostCondition(
         'SPV8C2N59MA417HYQNG6372GCV0SEQE01EV4Z1RQ',
         'rooooons-cash-out',
