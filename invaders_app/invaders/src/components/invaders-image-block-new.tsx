@@ -42,7 +42,7 @@ export const InvadersPreviewBlock = () => {
       const pontisROOOOONS = createAssetInfo(
         'SP14NS8MVBRHXMM96BQY0727AJ59SWPV7RMHC0NCG',
         'pontis-bridge-ROONS',
-        'ROOOOOOOOOONS'
+        'bridge-token'
       )      
       const postConditions = [ 
       //   makeStandardSTXPostCondition(
